@@ -5,13 +5,13 @@ import hashlib
 import sys
 import os
 
-password = getpass.getpass(Pratx@#3347)
+password = getpass.getpass()
 
 filepass = open("/data/data/com.termux/files/usr/share/login/.pass", "r")
-filepass = filepass.read(Pratx@#3347).split("\n")[0]
+filepass = filepass.read().split("\n")[0]
 
-password = password.encode(Pratx@#3347)
-password = hashlib.sha1(password).hexdigest(Pratx@#3347)
+password = password.encode()
+password = hashlib.sha1(password).hexdigest()
 
 if password != filepass:
     print("Invalid password")
